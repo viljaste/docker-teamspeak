@@ -11,6 +11,8 @@ RUN /src/entrypoint.sh build
 
 VOLUME ["/teamspeak"]
 
-EXPOSE 64738
+EXPOSE 9987/udp
+EXPOSE 30033
+EXPOSE 10011
 
 CMD ["/src/entrypoint.sh", "run"]
