@@ -1,0 +1,7 @@
+.git
+.gitignore
+README.md
+LICENSE.md
+docker-compose.yml
+teamspeak.conf
+tools

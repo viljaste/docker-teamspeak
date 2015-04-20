@@ -1,0 +1,16 @@
+teamspeak:
+  image: viljaste/teamspeak:latest
+  hostname: teamspeak
+  ports:
+    - "64738:64738"
+  volumes_from:
+    - teamspeakdata
+  environment:
+    - SUPW=SuperUser
+    - SERVERPASSWORD=
+    - USERS=100
+teamspeakdata:
+  image: viljaste/data:latest
+  hostname: teamspeakdata
+  volumes:
+    - /teamspeak
