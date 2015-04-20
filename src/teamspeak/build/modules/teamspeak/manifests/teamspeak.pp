@@ -11,6 +11,6 @@ class teamspeak::teamspeak {
   }
 
   bash_exec { 'mv /tmp/teamspeak3-server_linux-amd64-3.0.11.2 /usr/local/src/ts3':
-    require => Bash_exec['cd /tmp && tar xzf apcu-4.0.7.tgz']
+    require => Bash_exec['cd /tmp && tar xzf teamspeak3-server_linux-amd64-3.0.11.2.tar.gz']
   }
 }
