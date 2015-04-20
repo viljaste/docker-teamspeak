@@ -2,13 +2,11 @@ teamspeak:
   image: viljaste/teamspeak:latest
   hostname: teamspeak
   ports:
-    - "64738:64738"
+    - "9987:9987/udp"
+    - "30033:30033"
+    - "10011:10011"
   volumes_from:
     - teamspeakdata
-  environment:
-    - SUPW=SuperUser
-    - SERVERPASSWORD=
-    - USERS=100
 teamspeakdata:
   image: viljaste/data:latest
   hostname: teamspeakdata
