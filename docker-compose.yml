@@ -1,6 +1,7 @@
 teamspeak:
   image: viljaste/teamspeak:latest
   hostname: teamspeak
+  restart: always
   ports:
     - "9987:9987/udp"
     - "30033:30033"
