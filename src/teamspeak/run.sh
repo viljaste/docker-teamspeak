@@ -2,4 +2,4 @@
 
 puppet apply --modulepath=/src/teamspeak/run/modules /src/teamspeak/run/run.pp
 
-/usr/bin/supervisord
+supervisord -c /etc/supervisor/supervisord.conf
