@@ -14,4 +14,4 @@ EXPOSE 9987/udp
 EXPOSE 30033
 EXPOSE 10011
 
-CMD ["/src/entrypoint.sh", "run"]
+ENTRYPOINT ["/src/entrypoint.sh", "run"]
