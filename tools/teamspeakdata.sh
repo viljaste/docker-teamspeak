@@ -14,7 +14,7 @@ fi
 
 help() {
   cat << EOF
-teamspeakdata: Usage: teamspeakdata <backup|restore|rm>
+teamspeakdata: Usage: teamspeakdata <backup|restore>
 EOF
 
   exit 1
@@ -68,12 +68,6 @@ elif [ "${1}" = "restore" ]; then
       -v "${WORKING_DIR}:/backup" \
       viljaste/base:latest tar xzvf "/backup/${CONTAINER}.tar.gz"
   done
-elif [ "${1}" = "rm" ]; then
-  CONTAINERS="$(teamspeakdata_containers)"
-
-  if [ -n "${CONTAINERS}" ]; then
-    docker rm -f ${CONTAINERS}
-  fi
 else
   unknown_command
 fi
